@@ -60,3 +60,20 @@ $ git reset --hard b576d89
 # теперь мы на этом коммите
 HEAD is now at b576d89 feat: добавить массив Expenses и цикл для добавления трат
 ```
+
+### «Откатить» изменения, которые не попали ни в staging, ни в коммит, — git restore <file>
+
+```
+# случайно изменили файл example.txt
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+          modified:   example.txt
+
+$ git restore example.txt
+$ git status
+On branch main
+nothing to commit, working tree clean
+```
